@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom User Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container" method="post">
+    <div class="row">
+        <center><h1>Have a great day!!</h1></center>
+        <br><br><br>
+    </div>
+    <div th:each="user: ${userDetails}">
+    <h3 th:text="${user.firstName}"></h3>
+    <h3 th:text="${user.lastName}"></h3>
+    </div>
+
+
+</div>
+</body>
+</html>

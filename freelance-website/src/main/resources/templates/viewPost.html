@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom User Management System</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <h1>List Custom User</h1>
+  </div>
+  <table class="table table-striped table-bordered">
+    <thead class="table-dark">
+    <tr>
+      <th> Job Id</th>
+      <th> Job Type</th>
+      <th> Job Tittle</th>
+      <th> Job Description</th>
+      <th> Job Location</th>
+      <th> Maximum Price</th>
+      <th> Minimum Price</th>
+
+      <!--            <th> Action</th>-->
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="job: ${jobs}">
+      <td th:text="${job.id}"></td>
+      <td th:text="${job.type}"></td>
+      <td th:text="${job.tittle}"></td>
+      <td th:text="${job.description}"></td>
+      <td th:text="${job.location}"></td>
+      <td th:text="${job.max}"></td>
+      <td th:text="${job.min}"></td>
+
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+</body>
+</html>
